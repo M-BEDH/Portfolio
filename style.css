@@ -1,22 +1,33 @@
-body{
-    max-width: 1400px;
-    box-sizing: content-box;
-    margin: auto;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background:  linear-gradient(#061464 20%, #2039ca 47%, #2935d8 50%, #47a3f1);
+:root {
+    --backgroundBody: linear-gradient(#061464 20%, #2039ca 47%, #2935d8 50%, #47a3f1);
+    --background-color: #abf9ff;
+    --principal: #06195a;
+    --secondaire: #ff0084;
+    --tertiaire: #e20c0c;
+    --white: #fff;
+    --black: #000;
+    --hover: #5a5e5a;
+    --turquoise: #1effe8;
 }
 
-header{
-    width: 98%;
-    height: 175px; 
-    background:#abf9ff;
+
+body {
+    box-sizing: content-box;
+    margin: auto;
+    font-family: monospace;
+    background: var(--backgroundBody);
+}
+
+header {
+    width: 99%;
+    height: 240px;
+    background: var(--background-color);
     border-radius: 0 0 30px 30px;
-    top: -10px;
     display: inline-block;
     padding: 10px;
 }
 
-header h2 p{
+header h2 p {
     display: flex;
     justify-content: space-around;
     width: 30%;
@@ -25,22 +36,23 @@ header h2 p{
     padding-top: 5px;
 }
 
-header a{
+header a {
     margin: auto;
     display: block;
     text-decoration: none;
-    color: #06195a;
+    color: var(--principal);
     font-size: 22px;
+    padding-top: 50px
 }
 
 header a:hover {
-    color: #797a79;
-    text-decoration: underline 2px #ff198e;
+    color: var(--hover);
 }
 
-i.fa-solid.fa-arrow-right , i.fa-solid.fa-arrow-left{
-    color: #ff198e;
-    font-size: 14px;
+i.fa-solid.fa-arrow-right,
+i.fa-solid.fa-arrow-left {
+    color: var(--tertiaire);
+    font-size: 15px;
     padding: 0 5px;
 }
 
@@ -54,6 +66,15 @@ i.fa-solid.fa-arrow-right , i.fa-solid.fa-arrow-left{
     right: 0px;
     top: 0px;
 }
+.nav a:hover, .navApropos a:hover{
+text-decoration: underline var(--tertiaire);
+}
+
+.container {
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .contact {
     display: flex;
@@ -64,62 +85,53 @@ i.fa-solid.fa-arrow-right , i.fa-solid.fa-arrow-left{
 }
 
 .divPresentation {
-    display: flex;
-    flex-direction: row;
     width: 80%;
     margin: auto;
-    justify-content: center;
     font-weight: bold;
-    line-height: 1.5;
+    color: var(--principal);
 }
 
-span.presentationNom {
+.presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+p.presentationNom {
     font-size: 38px;
 }
 
-span.presentation{
-    display: block;
+p.presentation {
     margin: auto;
     width: 80%;
     font-size: 30px;
 }
 
-.divPresentation span {
-    color: #06195a;
-}
-
-main h1 {
-    width: 50%;
-    height: 50px;
-    display: flex;
-    color: #68fff0;
-    justify-content: center;
-    align-items: center;
+main .experiences {
+    width: 90%;
     margin: auto;
-    padding-top: 50px;
-    font-size: 40px;
-}
-
-main .experiences{
-    width: 91%;
-    margin: auto;
-    margin: 50px  auto ;
+    margin: 23px auto;
     padding-bottom: 45px;
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
-    color: #68fff0;
-    border-bottom: #1effe8 double;
+    color: var(--background-color);
+    border-bottom: var(--turquoise) double;
 }
-.CV a {
- width: 30%;
- margin: auto;
- color: #ee1717;
- font-weight: bold;
- position: absolute;
- right: 0;
- top:140px;
 
+.CV a {
+    width: 22%;
+    margin: auto;
+    color: var(--tertiaire);
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    top: 140px;
+    font-size: 18px;
 }
+
+.CV a:hover {
+    color: var(--black);
+}
+
 #projets {
     width: 100%;
     margin: auto;
@@ -129,23 +141,20 @@ main .experiences{
 }
 
 .divProjet {
-    width: 40%;
+    width: 31%;
     height: auto;
-    margin: 30px auto;
-    padding-bottom: 15px;
+    margin: 20px auto;
+    padding-bottom: 10px;
+    padding-top: 15px;
     justify-content: center;
-    border: 5px solid #020244;
+    border: 3px solid var(--black);
     border-radius: 20px;
-    background-color: #020244;
-} 
-
-.divProjet:hover {
-    border: 5px solid #1effe8;
+    background-color: var(--principal);
 }
 
-/* #projets .projet img:hover {
-    transform: scale(1.1);
-} */
+.divProjet:hover {
+    border: 3px solid var(--turquoise);
+}
 
 #projets .projet {
     width: 80%;
@@ -153,45 +162,40 @@ main .experiences{
     padding-bottom: 20px;
 }
 
-#projets .projet .titreProjet{
+#projets .projet .titreProjet {
     width: max-content;
+    color: var(--turquoise);
     margin: auto;
-    padding: 15px;
     display: block;
-    color: #68fff0;
-    font-size: 20px;
-}
-#projets .projet .titreProjet:hover {
-    color: #ffffff;
-    text-decoration: underline 3px #aafff7;
+    font-size: 18px;
 }
 
-#projets .projet a, #projets .description a {
-    text-decoration: none; 
+#projets .projet a,
+#projets .description a {
+    text-decoration: none;
 }
 
 i.fa-brands.fa-github {
-padding-left: 15px;
+    padding-left: 15px;
 }
 
 #projets .description {
     width: 60%;
     margin: auto;
-    color: #ffffff;
+    color: var(--white);
     font-size: 20px;
 }
 
 #projets .description a {
     width: max-content;
     display: block;
-    color: #ff51ab;
+    color: var(--secondaire);
     font-size: 18px;
     padding-bottom: 10px;
 }
 
 #projets .description a:hover {
-    color: #ffffff;
-    text-decoration: underline 3px #aafff7;
+    color: var(--white);
 }
 
 #projets .projet img {
@@ -201,57 +205,67 @@ padding-left: 15px;
     margin: auto;
     margin-top: 20px;
     border-radius: 30px;
-    border: #1effe8 3px solid;
-    padding: 3px;
+    border: 3px solid var(--black);
     object-fit: cover;
 }
 
-form{
+form {
     width: 60%;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-label{
+
+label {
     width: 30%;
     margin: auto;
     padding-top: 10px;
     font-size: 17px;
 }
-button{
+
+button {
     width: 25%;
     height: 25px;
     margin-top: 20px;
-    background-color: #b4e7d3;
+    background-color: var(--background-color);
 }
-button a{
-    color: #000;
+
+button a {
+    color: var(--black);
     text-decoration: none;
 }
-input{
+
+input {
     width: 50%;
     height: 25px;
 }
+
 header .aproposH1 {
-    padding-top: 20px;
+    /* padding-top: 20px; */
     display: flex;
     justify-content: center;
-    color: #06195a;
+    color: var(--principal);
+    font-size: 30px;
+    margin-top: 78px;
 }
 
-.navApropos a{
+.navApropos a {
     width: 70%;
-    color: #06195a;
+    color: var(--principal);
+    padding-top: 0;
 }
 
 #apropos {
     margin: auto;
-    color: white;
+    color: var(--white);
     margin: 70px;
     letter-spacing: 0.5px;
+    /* background-color: var(--principal); */
+    padding: 20px;
 }
-.aproposH2{
+
+.aproposH2 {
     width: 20%;
     margin: auto;
     display: flex;
@@ -260,37 +274,40 @@ header .aproposH1 {
     padding-bottom: 20px;
     font-size: 30px;
 }
-.about{
+
+.about {
     width: 100%;
     margin: auto;
     font-size: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
 }
 
 .about a {
     letter-spacing: 1px;
-    color: #1effe8;
+    color: var(--turquoise);
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .about a:hover {
-   
-    color: #bf0745;
+    color: var(--white);
     text-decoration: underline;
 }
 
-span{
-    color: #00ffe6;
+span {
+    color: var(--turquoise);
+    font-weight: bold;
 }
 
 mark {
-    background-color: #a6f5ff;
+    background-color: var(--background-color);
     font-style: oblique;
     border-radius: 10px;
 }
 
 footer {
     height: 150px;
-    background: #020244;
+    background: var(--principal);
     border-radius: 30px 30px 0 0;
 }
 
@@ -300,15 +317,17 @@ footer p {
     text-align: center;
     padding-top: 10px;
 }
+
 footer p a {
     font-size: 25px;
-    color: #ffffff;
+    color: var(--white);
     text-decoration: none;
 }
+
 footer p a:hover {
     display: block;
     transform: scale(1.1);
-    color: #ff198e;
+    color: var(--secondaire);
 }
 
 footer img {
@@ -319,7 +338,8 @@ footer img {
     justify-content: center;
     padding-top: 20px;
 }
-footer .footer{
+
+footer .footer {
     margin-top: 30px;
 }
 
@@ -336,7 +356,7 @@ footer .footer{
         -webkit-transform-origin: 0% 100%;
         transform-origin: 0% 100%;
     }
-    
+
     100% {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -352,7 +372,7 @@ footer .footer{
         -webkit-transform-origin: 0% 100%;
         transform-origin: 0% 100%;
     }
-    
+
     100% {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -360,6 +380,7 @@ footer .footer{
         transform-origin: 0% 100%;
     }
 }
+
 /******************************************************** ANIMATIONS *******************************************************************/
 .scale-up-tr {
     -webkit-animation: scale-up-tr 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -373,7 +394,7 @@ footer .footer{
         -webkit-transform-origin: 100% 0%;
         transform-origin: 100% 0%;
     }
-    
+
     100% {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -389,7 +410,7 @@ footer .footer{
         -webkit-transform-origin: 100% 0%;
         transform-origin: 100% 0%;
     }
-    
+
     100% {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -402,72 +423,76 @@ footer .footer{
 /*************************************************** MEDIA-QUERY ********************************************************/
 
 @media screen and (max-width: 747px) {
-    header{
-        width: 95%;
-        height: 180px;
-        box-shadow: inset #020244 1px -1px 10px 10px;
+    header {
+        /* width: 95%; */
+        /* height: 180px; */
+        box-shadow: inset var(--principal) 1px -1px 0px 7px;
     }
-    header h1{
+
+    header h1 {
         width: 100%;
         font-size: 40px;
     }
-    
+
     header a {
         font-size: 16px;
     }
-    
+
     .projets {
         padding-top: 5px;
     }
-    
-    .aproposH2{
+
+    .aproposH2 {
         width: 50%;
         font-size: 20px;
     }
-    
-    header h2 p{
+
+    header h2 p {
         width: 60%;
         margin: auto;
         font-size: 20px;
     }
-    
+
     main .experiences {
         font-size: 22px;
         font-weight: lighter;
     }
-    main .experiences h3{
+
+    main .experiences h3 {
         width: 100%;
         padding-top: 20px;
         font-size: 25px;
     }
+
     .divPresentation {
         width: 100%;
         line-height: 30px;
         padding-top: 45px;
     }
-    .divPresentation span{
+
+    .divPresentation span {
         width: 100%;
         font-size: 20px;
     }
-    
+
     .divPresentation .presentationNom {
         font-size: 25px;
     }
-    
+
     .divProjet {
         width: 100%;
         margin-bottom: 0px;
         border-radius: 0px;
     }
-    
+
     #projets .projet {
         width: 80%;
     }
-    
-    #projets .projet .titreProjet{
+
+    #projets .projet .titreProjet {
         font-size: 20px;
     }
-    
+
     #projets .projet img {
         width: 60%;
         height: 200px;
@@ -483,33 +508,33 @@ footer .footer{
     }
 
     .CV a {
-        width: 70%;
+        width: 50%;
         padding: 6px;
     }
 
-   footer {
-    border-radius: 0;
- }
+    footer {
+        border-radius: 0;
+    }
+
     footer p {
         width: 100%;
     }
-    
-    form{
+
+    form {
         width: 100%;
     }
-    
-    input{
+
+    input {
         width: 80%;
     }
-    
-    .about{
+
+    .about {
         width: 89%;
     }
-    
+
     #apropos {
         margin: 20px;
         letter-spacing: 0px;
         line-height: 25px;
     }
 }
-
