@@ -24,18 +24,14 @@ body {
 
 header {
     width: 100%;
-    height: 245px;
+    height: 180px;
     background: var(--background-color);
     border-radius: 0 0 30px 30px;
-}
-
-header h2 p {
     display: flex;
-    justify-content: space-around;
-    width: 30%;
-    margin: auto;
-    font-size: 22px;
-    padding-top: 5px;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 20px;
+
 }
 
 header a {
@@ -51,27 +47,40 @@ header a:hover {
     color: var(--hover);
 }
 
-i.fa-solid.fa-arrow-right,
-i.fa-solid.fa-arrow-left {
-    color: var(--tertiaire);
-    font-size: 15px;
-    padding: 0 5px;
-}
-
 .nav {
     position: absolute;
-    top: 0px;
     left: 76%;
+    display: flex;
+}
+
+nav ul {
+padding: 0;
+display: flex;
+}
+
+.nav a {
+    padding: 0;
+    font-size: 17px;
+    font-weight: bold;
 }
 
 nav li {
-    list-style: circle;
+list-style: none;
+text-align: center;
+padding: 5px;
+box-shadow: inset 1px 1px 3px 0px var(--hover);
+margin-right: 10px;
+}
+
+nav li:hover {
+    box-shadow: 1px 1px 5px var(--hover);
 }
 
 .container {
-    padding: 5px;
+    width: 95%;
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
 }
 
 .contact {
@@ -91,15 +100,21 @@ nav li {
 
 h1 {
     font-size: 38px;
+    margin-bottom: 10px;
+    margin-top: 0;
 }
 
-p.job{
+.job{
     margin: auto;
     font-size: 30px;
 }
 
+.job a {
+    padding-top: 20px;
+}
+
 main .experiences {
-    width: 90%;
+    width: 75%;
     margin: auto;
     margin: 23px auto;
     padding-bottom: 45px;
@@ -110,18 +125,19 @@ main .experiences {
 }
 
 .presentation a{
-    width: 22%;
-    margin: auto;
+    width: 66%;
+    margin: 20px auto ;
     color: var(--cv);
     font-weight: bold;
-    position: absolute;
-    right: 0;
-    top: 140px;
     font-size: 16px;
+    text-align: center;
+    padding: 5px;
+    box-shadow: inset 1px 1px 3px 0px var(--hover);
 }
 
 .presentation a:hover {
     color: var(--black);
+    box-shadow: 1px 1px 5px var(--principal);
 }
 
 #projets {
@@ -159,30 +175,25 @@ main .experiences {
     color: var(--turquoise);
     margin: auto;
     display: block;
-    font-size: 18px;
+    font-size: 17px;
 }
-
+ 
 #projets .projet a,
 #projets .description a {
     text-decoration: none;
 }
 
-i.fa-brands.fa-github {
-    padding-left: 15px;
-}
-
 #projets .description {
-    width: 60%;
+    width: 80%;
     margin: auto;
     color: var(--white);
-    font-size: 20px;
+    font-size: 18px;
 }
 
 #projets .description a {
-    width: max-content;
     display: block;
     color: var(--secondaire);
-    font-size: 18px;
+    font-size: 16px;
     padding-bottom: 10px;
 }
 
@@ -191,7 +202,7 @@ i.fa-brands.fa-github {
 }
 
 #projets .projet img {
-    width: 70%;
+    width: 100%;
     height: 250px;
     display: block;
     margin: auto;
@@ -240,7 +251,7 @@ input {
 }
 
 h2{
-    width: 20%;
+    width: 40%;
     color: var(--white);
     margin: auto;
     display: flex;
@@ -398,7 +409,7 @@ footer .footer {
 
 /*************************************************** MEDIA-QUERY ********************************************************/
 
-@media screen and (max-width: 747px) {
+@media screen and (max-width: 1000px) {
     header {
         box-shadow: inset var(--principal) 1px -1px 0px 7px;
     }
@@ -416,11 +427,6 @@ footer .footer {
     }
     .projets {
         padding-top: 5px;
-    }
-
-    h2{
-        width: 50%;
-        font-size: 20px;
     }
 
     header h1{
