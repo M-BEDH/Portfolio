@@ -1,6 +1,6 @@
 :root {
     --backgroundBody: linear-gradient(#061464 20%, #2039ca 47%, #2935d8 50%, #47a3f1);
-    --background-color: #abf9ff;
+    --background-color: radial-gradient(circle, rgba(171, 249, 255, 1) 18%, rgba(171, 249, 255, 0.40940126050420167) 100%);
     --principal: #06195a;
     --secondaire: #ff0084;
     --tertiaire: #e20c0c;
@@ -13,13 +13,12 @@
 
 
 body {
-    max-width:  1440px;
+    /* max-width:  1440px; */
     box-sizing: content-box;
     margin: auto;
     padding: 0;
     font-family: monospace;
     background: var(--backgroundBody);
-
 }
 
 header {
@@ -30,8 +29,8 @@ header {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding-top: 20px;
-
+    padding-top: 40px;
+    
 }
 
 header a {
@@ -44,40 +43,45 @@ header a {
 }
 
 header a:hover {
-    color: var(--hover);
+    color: var(--white);
 }
 
 .nav {
     position: absolute;
-    left: 76%;
+    left: 70%;
     display: flex;
 }
 
 nav ul {
-padding: 0;
-display: flex;
+    padding: 0;
+    display: flex;
 }
 
 .nav a {
     padding: 0;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
 }
 
+nav a:hover {
+    font-weight: lighter;
+}
+
 nav li {
-list-style: none;
-text-align: center;
-padding: 5px;
-box-shadow: inset 1px 1px 3px 0px var(--hover);
-margin-right: 10px;
+    list-style: none;
+    text-align: center;
+    padding: 5px;
+    box-shadow: inset 1px 1px 3px 0px var(--hover);
+    margin-right: 10px;
 }
 
 nav li:hover {
     box-shadow: 1px 1px 5px var(--hover);
+    font-weight: lighter;
 }
 
 .container {
-    width: 95%;
+    width: 75%;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
@@ -118,9 +122,9 @@ main .experiences {
     margin: auto;
     margin: 23px auto;
     padding-bottom: 45px;
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
-    color: var(--background-color);
+    color: var(--turquoise);
     border-bottom: var(--turquoise) double;
 }
 
@@ -132,7 +136,7 @@ main .experiences {
     font-size: 16px;
     text-align: center;
     padding: 5px;
-    box-shadow: inset 1px 1px 3px 0px var(--hover);
+    box-shadow: inset 0px 0px 3px 1px var(--hover);
 }
 
 .presentation a:hover {
@@ -149,7 +153,7 @@ main .experiences {
 }
 
 .divProjet {
-    width: 31%;
+    width: 30%;
     height: auto;
     margin: 20px auto;
     padding-bottom: 10px;
@@ -177,7 +181,7 @@ main .experiences {
     display: block;
     font-size: 17px;
 }
- 
+
 #projets .projet a,
 #projets .description a {
     text-decoration: none;
@@ -286,15 +290,9 @@ span {
     font-weight: bold;
 }
 
-mark {
-    background-color: var(--background-color);
-    font-style: oblique;
-    border-radius: 10px;
-}
-
 footer {
     height: 150px;
-    background: var(--principal);
+    background: var(--background-color);
     border-radius: 30px 30px 0 0;
 }
 
@@ -306,14 +304,14 @@ footer p {
 }
 
 footer p a {
-    font-size: 25px;
-    color: var(--white);
+    font-size: 20px;
+    color: var(--principal);
     text-decoration: none;
 }
 
 footer p a:hover {
     display: block;
-    transform: scale(1.1);
+    transform: scale(1.05);
     color: var(--secondaire);
 }
 
@@ -343,7 +341,7 @@ footer .footer {
         -webkit-transform-origin: 0% 100%;
         transform-origin: 0% 100%;
     }
-
+    
     100% {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -359,7 +357,7 @@ footer .footer {
         -webkit-transform-origin: 0% 100%;
         transform-origin: 0% 100%;
     }
-
+    
     100% {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -381,7 +379,7 @@ footer .footer {
         -webkit-transform-origin: 100% 0%;
         transform-origin: 100% 0%;
     }
-
+    
     100% {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -397,7 +395,7 @@ footer .footer {
         -webkit-transform-origin: 100% 0%;
         transform-origin: 100% 0%;
     }
-
+    
     100% {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -410,103 +408,157 @@ footer .footer {
 /*************************************************** MEDIA-QUERY ********************************************************/
 
 @media screen and (max-width: 1000px) {
-    header {
-        box-shadow: inset var(--principal) 1px -1px 0px 7px;
-    }
-
-    header a {
-        font-size: 16px;
-    }
-
+    
     .presentation {
-        padding-top: 20px
-    }
-
-    p.job {
-        font-size: 20px;
+        width: 100%;
+        font-size: 25px;
     }
     .projets {
         padding-top: 5px;
     }
-
+    
     header h1{
         width: 60%;
         margin: auto;
-        font-size: 20px;
     }
-
+    
+    p.job {
+        width: 60%;
+        margin: auto;
+    }
+    
     main .experiences {
         font-size: 22px;
         font-weight: lighter;
     }
-
+    
     main .experiences h3 {
         width: 100%;
         padding-top: 20px;
         font-size: 25px;
     }
-
-    h1{
-        width: 100%;
-        font-size: 25px;
-    }
-
+    
     .divProjet {
         width: 100%;
         margin-bottom: 0px;
         border-radius: 0px;
     }
-
+    
     #projets .projet {
         width: 80%;
     }
-
+    
     #projets .projet .titreProjet {
         font-size: 20px;
     }
-
+    
     #projets .projet img {
         width: 60%;
         height: 200px;
         display: block;
     }
-
+    
     #projets .description {
         font-size: 17px;
     }
-
-    .nav {
-        padding: 6px;
-    }
-
-    .CV a {
-        width: 50%;
-        padding: 6px;
-    }
-
+    
     footer {
         border-radius: 0;
     }
-
+    
     footer p {
         width: 100%;
     }
-
+    
     form {
         width: 100%;
     }
-
+    
     input {
         width: 80%;
     }
-
+    
     #about {
-        width: 50%;
+        width: 75%;
     }
-
+    
     #apropos {
         margin: 20px;
         letter-spacing: 0px;
         line-height: 25px;
+    }
+}
+
+
+@media screen and (max-width: 720px) {
+    
+    header {
+        height: 130px;
+        border-radius: 0;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav li {
+        margin-bottom: 10px;
+    }
+    
+    .nav a {
+        font-size: 12px;
+    }
+    header h1 {
+        width: 95%;
+        margin: auto;
+        font-size: 23px;
+    }
+    
+    p.job {
+        width: 95%;
+        margin: auto;
+        font-size: 20px;
+    }
+    
+    .presentation a {
+        width: 40%;
+        margin: 20px 0;
+        font-size: 11px;
+    }
+    #about {
+        font-size: 15px;
+    }
+    
+    .container {
+        width: 90%;
+    }
+    #projets .projet img {
+        width: 100%;
+    }
+    
+    main .experiences {
+        font-size: 18px;
+        margin: auto;
+        padding-bottom: 10px;
+    }
+    #projets .projet .titreProjet {
+        font-size: 16px;
+    }
+    
+    #projets .description {
+        font-size: 14px;
+    }
+    
+    #projets .description a{
+        font-size: 13px;
+    }
+
+    footer .footer{
+        margin: 0;
+        padding-top: 20px;
+    }
+
+    footer p a {
+        font-size: 15px;
+        font-weight: bolder;
     }
 }
