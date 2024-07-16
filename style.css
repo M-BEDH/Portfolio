@@ -4,6 +4,7 @@
     --principal: #06195a;
     --secondaire: #ff0084;
     --tertiaire: #e20c0c;
+    --cv: #f54009;
     --white: #fff;
     --black: #000;
     --hover: #5a5e5a;
@@ -14,6 +15,7 @@
 body {
     box-sizing: content-box;
     margin: auto;
+    padding: 0;
     font-family: monospace;
     background: var(--backgroundBody);
 }
@@ -58,16 +60,15 @@ i.fa-solid.fa-arrow-left {
 
 .nav {
     width: 32%;
-    display: flex;
-    padding-right: 20px;
     flex-direction: row;
-    align-items: center;
+     align-items: center;
     position: absolute;
-    right: 0px;
+    right: -8%;
     top: 0px;
 }
-.nav a:hover, .navApropos a:hover{
-text-decoration: underline var(--tertiaire);
+
+nav li {
+    list-style: circle;
 }
 
 .container {
@@ -96,13 +97,12 @@ text-decoration: underline var(--tertiaire);
     flex-direction: column;
     align-items: center;
 }
-p.presentationNom {
+h1{
     font-size: 38px;
 }
 
-p.presentation {
+p.job{
     margin: auto;
-    width: 80%;
     font-size: 30px;
 }
 
@@ -117,18 +117,18 @@ main .experiences {
     border-bottom: var(--turquoise) double;
 }
 
-.CV a {
+.presentation a{
     width: 22%;
     margin: auto;
-    color: var(--tertiaire);
+    color: var(--cv);
     font-weight: bold;
     position: absolute;
     right: 0;
     top: 140px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
-.CV a:hover {
+.presentation a:hover {
     color: var(--black);
 }
 
@@ -267,6 +267,7 @@ header .aproposH1 {
 
 .aproposH2 {
     width: 20%;
+    color: var(--white);
     margin: auto;
     display: flex;
     justify-content: center;
@@ -275,21 +276,22 @@ header .aproposH1 {
     font-size: 30px;
 }
 
-.about {
-    width: 100%;
+#about {
+    color: var(--white);
+    width: 80%;
     margin: auto;
     font-size: 20px;
     padding-bottom: 15px;
 }
 
-.about a {
+#about a {
     letter-spacing: 1px;
     color: var(--turquoise);
     font-weight: bold;
     text-decoration: none;
 }
 
-.about a:hover {
+#about a:hover {
     color: var(--white);
     text-decoration: underline;
 }
