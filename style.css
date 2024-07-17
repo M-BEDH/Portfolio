@@ -373,7 +373,6 @@ footer .footer {
     
     .presentation {
         width: 100%;
-        font-size: 25px;
     }
     
     .presentation img {
@@ -481,9 +480,9 @@ footer .footer {
     }
     
     h1 {
-        width: 80%;
+        width: 99%;
         margin: auto;
-        font-size: 25px;
+        font-size: 23px;
     }
 
     h2 {
@@ -492,9 +491,9 @@ footer .footer {
     }
     
     p.job {
-        width: 80%;
+        width: 99%;
         margin: auto;
-        font-size: 23px;
+        font-size: 21px;
     }
     
     .presentation img {
