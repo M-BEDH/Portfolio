@@ -460,6 +460,7 @@ footer .footer {
     header {
         height: 145px;
         border-radius: 0;
+        padding: 5px;
     }
     nav ul {
         flex-direction: column;
@@ -480,7 +481,7 @@ footer .footer {
     }
     
     .nav li:hover, .nav .cv:hover {
-        box-shadow: #061464 1px 1px 3px;
+        box-shadow: var(--principal) 1px 1px 3px;
     }
     
     h1 {
@@ -494,22 +495,27 @@ footer .footer {
         font-size: 20px;
     }
     
-    p.job {
-        width: 99%;
-        margin: auto;
-        font-size: 21px;
+    .presentation {
+        line-height: 2;
     }
     
-    .presentation {
-        line-height: 1.5;
-    }
     .presentation img {
-        display: none;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 11%;
+        left: 30%;
     }
     
     #about {
         font-size: 15px;
         width: 95%;
+    }
+    
+    p.job {
+        width: 99%;
+        margin: auto;
+        font-size: 21px;
     }
     
     .container {
