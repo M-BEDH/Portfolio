@@ -1,14 +1,13 @@
 :root {
     --backgroundBody: linear-gradient(#061464 20%, #2039ca 47%, #2935d8 50%, #47a3f1);
-    --background-color: radial-gradient(circle, rgba(171, 249, 255, 1) 18%, rgba(171, 249, 255, 0.40940126050420167) 100%);
+    --banner: radial-gradient(circle, #abf9ff 18%, #abf9ff2d 100%);
     --principal: #06195a;
     --secondaire: #ff0084;
     --tertiaire: #e20c0c;
-    --cv: #f54009;
     --white: #fff;
     --black: #000;
     --hover: #5a5e5a;
-    --turquoise: #1effe8;
+    --turquoise: #00ffe5;
 }
 
 
@@ -18,38 +17,32 @@ body {
     margin: auto;
     padding: 0;
     font-family: monospace;
-    background: var(--backgroundBody);
+    /* background: var(--backgroundBody); */
 }
 
 header {
     width: 100%;
     height: 180px;
-    background: var(--background-color);
+    background: var(--banner);
     border-radius: 0 0 30px 30px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     padding-top: 40px;
-    
 }
 
 header a {
     margin: auto;
     display: block;
     text-decoration: none;
-    color: var(--principal);
-    font-size: 22px;
-    padding-top: 50px
-}
-
-header a:hover {
-    color: var(--white);
 }
 
 .nav {
     position: absolute;
     left: 70%;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 nav ul {
@@ -59,24 +52,32 @@ nav ul {
 
 .nav a {
     padding: 0;
+    text-decoration: none;
+    color: var(--principal);
     font-size: 16px;
     font-weight: bold;
 }
 
-nav a:hover {
-    font-weight: lighter;
+.nav .cv {
+    color: var(--tertiaire);
+    padding: 3px;
+}
+
+.nav .cv:hover {
+    box-shadow: var(--hover) 1px 1px 3px;
 }
 
 nav li {
     list-style: none;
     text-align: center;
-    padding: 5px;
-    box-shadow: inset 1px 1px 3px 0px var(--hover);
+    padding: 3px;
+    box-shadow: inset 1px 1px 2px 0px var(--hover);
     margin-right: 10px;
 }
 
 nav li:hover {
     box-shadow: 1px 1px 5px var(--hover);
+    box-shadow: var(--principal) 1px 1px 3px;
     font-weight: lighter;
 }
 
@@ -101,6 +102,14 @@ nav li:hover {
     flex-direction: column;
     align-items: center;
 }
+.presentation img {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 1%;
+    left: 10%;
+    animation: scale-up-tr 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
 
 h1 {
     font-size: 38px;
@@ -118,7 +127,7 @@ h1 {
 }
 
 main .experiences {
-    width: 75%;
+    width: 100%;
     margin: auto;
     margin: 23px auto;
     padding-bottom: 45px;
@@ -126,22 +135,6 @@ main .experiences {
     text-align: center;
     color: var(--turquoise);
     border-bottom: var(--turquoise) double;
-}
-
-.presentation a{
-    width: 66%;
-    margin: 20px auto ;
-    color: var(--cv);
-    font-weight: bold;
-    font-size: 16px;
-    text-align: center;
-    padding: 5px;
-    box-shadow: inset 0px 0px 3px 1px var(--hover);
-}
-
-.presentation a:hover {
-    color: var(--black);
-    box-shadow: 1px 1px 5px var(--principal);
 }
 
 #projets {
@@ -235,7 +228,7 @@ button {
     width: 25%;
     height: 25px;
     margin-top: 20px;
-    background-color: var(--background-color);
+    background-color: var(--banner);
 }
 
 button a {
@@ -256,7 +249,7 @@ input {
 
 h2{
     width: 40%;
-    color: var(--white);
+    color: var(--principal);    
     margin: auto;
     display: flex;
     justify-content: center;
@@ -266,8 +259,8 @@ h2{
 }
 
 #about {
-    color: var(--white);
-    width: 80%;
+    color: var(--principal);
+    width: 70%;
     margin: auto;
     font-size: 20px;
     padding-bottom: 15px;
@@ -281,18 +274,17 @@ h2{
 }
 
 #about a:hover {
-    color: var(--white);
+    color: var(--secondaire);
     text-decoration: underline;
 }
 
 span {
     color: var(--turquoise);
-    font-weight: bold;
 }
 
 footer {
     height: 150px;
-    background: var(--background-color);
+    background: var(--banner);
     border-radius: 30px 30px 0 0;
 }
 
@@ -405,14 +397,30 @@ footer .footer {
 }
 
 
-/*************************************************** MEDIA-QUERY ********************************************************/
+/*************************************************** MEDIA-QUERY TABLETTE ********************************************************/
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
+    
+    body {
+        background:var(--backgroundBody);
+    }
+    
+    #about , h2 {
+        color: var(--white);
+    }
     
     .presentation {
         width: 100%;
         font-size: 25px;
     }
+    
+    .presentation img {
+        width: 150px;
+        height: 150px;
+        left: 2%;
+        top: 2%;
+    }
+    
     .projets {
         padding-top: 5px;
     }
@@ -439,7 +447,7 @@ footer .footer {
     }
     
     .divProjet {
-        width: 100%;
+        width: 80%;
         margin-bottom: 0px;
         border-radius: 0px;
     }
@@ -490,7 +498,8 @@ footer .footer {
 }
 
 
-@media screen and (max-width: 720px) {
+/*************************************************** MEDIA-QUERY PORTABLE********************************************************/
+@media screen and (max-width: 779px) {
     
     header {
         height: 130px;
@@ -504,26 +513,31 @@ footer .footer {
         margin-bottom: 10px;
     }
     
-    .nav a {
+    .nav a{
         font-size: 12px;
+        color: var(--turquoise);
     }
+
+    .nav li:hover {
+        box-shadow: #061464 1px 1px 3px;
+    }
+    
     header h1 {
-        width: 95%;
+        width: 80%;
+        margin: auto;
+        font-size: 25px;
+    }
+    
+    p.job {
+        width: 80%;
         margin: auto;
         font-size: 23px;
     }
     
-    p.job {
-        width: 95%;
-        margin: auto;
-        font-size: 20px;
+    .presentation img {
+        display: none;
     }
     
-    .presentation a {
-        width: 40%;
-        margin: 20px 0;
-        font-size: 11px;
-    }
     #about {
         font-size: 15px;
     }
@@ -551,14 +565,17 @@ footer .footer {
     #projets .description a{
         font-size: 13px;
     }
-
+    
     footer .footer{
         margin: 0;
         padding-top: 20px;
+        padding-bottom: 10px;
     }
-
+    
     footer p a {
         font-size: 15px;
         font-weight: bolder;
     }
 }
+
+
