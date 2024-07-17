@@ -396,6 +396,11 @@ footer .footer {
         margin: auto;
     }
     
+    .nav .cv {
+        color: var(--white);
+        font-weight: lighter;
+    }
+    
     h3 {
         font-size: 25px;
         font-weight: lighter;
@@ -474,14 +479,10 @@ footer .footer {
         position: static;
     }
     
-    .nav a, .nav .cv {
+    .nav a {
         font-size: 12px;
         color: var(--white);
         font-weight: lighter;
-    }
-    
-    .nav li:hover, .nav .cv:hover {
-        box-shadow: var(--principal) 1px 1px 3px;
     }
     
     h1 {
@@ -507,7 +508,7 @@ footer .footer {
     }
     
     .presentation img {
-     display: none;
+        display: none;
     }
     
     #about {
