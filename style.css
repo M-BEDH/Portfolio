@@ -500,6 +500,9 @@ footer .footer {
         font-size: 21px;
     }
     
+    .presentation {
+        line-height: 1.5;
+    }
     .presentation img {
         display: none;
     }
