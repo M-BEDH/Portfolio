@@ -488,13 +488,13 @@ footer .footer {
     
     h1 {
         width: 99%;
-        font-size: 23px;
+        font-size: 21px;
         padding-left: 5px;
     }
     
     p.job {
         width: 99%;
-        font-size: 21px;
+        font-size: 19px;
         padding-left: 5px;
     }
     
@@ -505,7 +505,7 @@ footer .footer {
     
     .presentation {
         line-height: 1.9;
-        padding: 20px;
+        padding: 25px 5px 10px 5px;
     }
     
     .presentation img {
