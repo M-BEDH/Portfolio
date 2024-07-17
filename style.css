@@ -3,7 +3,7 @@
     --banner: radial-gradient(circle, #abf9ff 18%, #abf9ff2d 100%);
     --principal: #06195a;
     --secondaire: #ff0084;
-    --tertiaire: #e20c0c;
+    --tertiaire: #0c1ae2;
     --white: #fff;
     --black: #000;
     --hover: #5a5e5a;
@@ -126,14 +126,14 @@ h1 {
     padding-top: 20px;
 }
 
-main .experiences {
+h3 {
     width: 100%;
     margin: auto;
-    margin: 23px auto;
-    padding-bottom: 45px;
+    margin: 25px auto 0;
+    padding-bottom: 25px;
     font-size: 30px;
     text-align: center;
-    color: var(--turquoise);
+    color: var(--principal);
     border-bottom: var(--turquoise) double;
 }
 
@@ -207,44 +207,6 @@ main .experiences {
     border-radius: 30px;
     border: 3px solid var(--black);
     object-fit: cover;
-}
-
-form {
-    width: 60%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-label {
-    width: 30%;
-    margin: auto;
-    padding-top: 10px;
-    font-size: 17px;
-}
-
-button {
-    width: 25%;
-    height: 25px;
-    margin-top: 20px;
-    background-color: var(--banner);
-}
-
-button a {
-    color: var(--black);
-    text-decoration: none;
-}
-
-input {
-    width: 50%;
-    height: 25px;
-}
-
-.navApropos a {
-    width: 70%;
-    color: var(--principal);
-    padding-top: 0;
 }
 
 h2{
@@ -425,7 +387,7 @@ footer .footer {
         padding-top: 5px;
     }
     
-    header h1{
+    h1{
         width: 60%;
         margin: auto;
     }
@@ -435,15 +397,10 @@ footer .footer {
         margin: auto;
     }
     
-    main .experiences {
-        font-size: 22px;
-        font-weight: lighter;
-    }
-    
-    main .experiences h3 {
-        width: 100%;
-        padding-top: 20px;
+    h3 {
         font-size: 25px;
+        font-weight: lighter;
+        color: var(--turquoise)
     }
     
     .divProjet {
@@ -519,11 +476,11 @@ footer .footer {
         font-weight: lighter;
     }
 
-    .nav li:hover {
+    .nav li:hover, .nav .cv:hover {
         box-shadow: #061464 1px 1px 3px;
     }
     
-    header h1 {
+    h1 {
         width: 80%;
         margin: auto;
         font-size: 25px;
@@ -552,13 +509,13 @@ footer .footer {
     .container {
         width: 100%;
     }
+
     #projets .projet img {
         width: 100%;
     }
 
-    main .experiences {
-        font-size: 18px;
-        margin: auto;
+    h3 {
+        font-size: 20px;
         padding-bottom: 10px;
     }
 
