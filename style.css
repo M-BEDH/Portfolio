@@ -513,9 +513,10 @@ footer .footer {
         margin-bottom: 10px;
     }
     
-    .nav a{
+    .nav a, .nav .cv {
         font-size: 12px;
-        color: var(--turquoise);
+        color: var(--white);
+        font-weight: lighter;
     }
 
     .nav li:hover {
@@ -540,20 +541,28 @@ footer .footer {
     
     #about {
         font-size: 15px;
+        width: 95%;
     }
     
     .container {
-        width: 90%;
+        width: 100%;
     }
     #projets .projet img {
         width: 100%;
     }
-    
+
     main .experiences {
         font-size: 18px;
         margin: auto;
         padding-bottom: 10px;
     }
+
+    .divProjet {
+        width: 95%;
+        margin: 10px auto;
+        border-radius: 0;
+    }
+
     #projets .projet .titreProjet {
         font-size: 16px;
     }
