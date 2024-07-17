@@ -528,6 +528,11 @@ footer .footer {
         margin: auto;
         font-size: 25px;
     }
+
+    h2 {
+        width: 80%;
+        font-size: 20px;
+    }
     
     p.job {
         width: 80%;
