@@ -12,12 +12,10 @@
 
 
 body {
-    /* max-width:  1440px; */
     box-sizing: content-box;
     margin: auto;
     padding: 0;
     font-family: monospace;
-    /* background: var(--backgroundBody); */
 }
 
 header {
