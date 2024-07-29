@@ -521,7 +521,6 @@ footer img {
         font-size: 11px;
         color: var(--white);
         font-weight: lighter;
-        /* width: max-content; */
     }
     
     h1 {
@@ -566,7 +565,7 @@ footer img {
     
     h3 {
         font-size: 20px;
-        padding-bottom: 10px;
+        padding-bottom: 15px;
     }
     
     .divProjet {
