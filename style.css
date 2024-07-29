@@ -80,7 +80,7 @@ nav li:hover {
 }
 
 .container {
-    width: 75%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
@@ -394,6 +394,10 @@ footer img {
     body {
         background:var(--backgroundBody);
     }
+
+    .container {
+        width: 100%;
+    }
     
     #about , h2 {
         color: var(--white);
@@ -436,13 +440,13 @@ footer img {
     }
     
     .divProjet {
-        width: 80%;
+        width: 98%;
         margin-bottom: 0px;
         border-radius: 0px;
     }
     
     #projets .projet {
-        width: 80%;
+        width: 100%;
     }
     
     #projets .projet .titreProjet {
@@ -450,7 +454,7 @@ footer img {
     }
     
     #projets .projet img {
-        width: 60%;
+        width: 80%;
         height: 200px;
         display: block;
     }
@@ -558,10 +562,6 @@ footer img {
     }
     
     .container {
-        width: 100%;
-    }
-    
-    #projets .projet img {
         width: 100%;
     }
     
