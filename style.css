@@ -371,7 +371,7 @@ footer img {
     top: -10px;
     left: 0;
     right: 0;
-    height: 18px;
+    height: 20px;
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1440 320"><path fill="%2306195a" fill-opacity="1" d="M0,224L48,192C96,160,192,96,288,96C384,96,480,160,576,176C672,192,768,160,864,133.3C960,107,1056,85,1152,90.7C1248,96,1344,128,1392,144L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
     z-index: -1;
 }
@@ -592,12 +592,12 @@ footer img {
     
     footer .footer{
         margin: 0;
-        padding-top: 20px;
+        padding-top: 10px;
         padding-bottom: 10px;
     }
     
     footer p a {
-        font-size: 15px;
+        font-size: 17px;
         font-weight: bolder;
     }
     
