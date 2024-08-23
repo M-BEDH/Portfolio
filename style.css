@@ -1,5 +1,5 @@
 :root {
-    --backgroundBody: linear-gradient(#061464 20%, #2039ca 47%, #2935d8 50%, #47a3f1);
+    --backgroundBody: linear-gradient(#030a31 20%, #2039ca 47%, #2935d8 50%, #47a3f1);
     --banner: radial-gradient(circle, #abf9ff 18%, #abf9ff2d 100%);
     --principal: #06195a;
     --secondaire: #ff0084;
@@ -8,6 +8,7 @@
     --black: #000;
     --hover: #5a5e5a;
     --turquoise: #00ffe5;
+    --span: #001dff;
 }
 
 
@@ -228,8 +229,8 @@ h2{
 
 #about a {
     letter-spacing: 1px;
-    color: var(--turquoise);
     font-weight: bold;
+    color: var(--tertiaire);
     text-decoration: none;
 }
 
@@ -239,12 +240,16 @@ h2{
 }
 
 span {
-    color: var(--turquoise);
+    color: var(--span);
 }
 
 footer {
     height: 150px;
     background: var(--banner);
+}
+
+.footer {
+padding-top: 20px;
 }
 
 footer p {
@@ -438,7 +443,15 @@ footer img {
         font-weight: lighter;
         color: var(--turquoise)
     }
-    
+    span {
+        color: var(--turquoise);
+        font-weight: lighter;
+    }
+
+    #about a {
+        font-weight: lighter;
+    }
+
     .divProjet {
         width: 98%;
         margin-bottom: 0px;
