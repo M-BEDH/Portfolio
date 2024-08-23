@@ -144,6 +144,10 @@ h3 {
     flex-wrap: wrap;
 }
 
+#projets span {
+    color: var(--turquoise);
+}
+
 .divProjet {
     width: 30%;
     height: auto;
