@@ -548,6 +548,7 @@ footer img {
     }
     
     h1 {
+        width: 85%;
         font-size: 19px;
         margin: 0;
         }
@@ -556,6 +557,7 @@ footer img {
         font-size: 17px;
         font-weight: bold;
         margin: 0;
+        width: 85%;
     }
     
     h2 {
@@ -566,6 +568,7 @@ footer img {
     .presentation {
         line-height: 1.5;
         padding: 25px 5px 10px 0px;
+        width: 100%;
     }
     
     .presentation img {
