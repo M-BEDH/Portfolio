@@ -548,16 +548,16 @@ footer img {
     }
     
     h1 {
-        width: 99%;
-        font-size: 21px;
-        padding-left: 5px;
-    }
+        width: 90%;
+        font-size: 19px;
+        margin: 0;
+        }
     
     p.job {
-        width: 99%;
-        font-size: 19px;
-        padding-left: 5px;
+        width: 90%;
+        font-size: 17px;
         font-weight: bold;
+        margin: 0;
     }
     
     h2 {
