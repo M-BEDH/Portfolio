@@ -1,0 +1,501 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.parallax{
+    background-image:url('../public/ressources/sunset.jpg');/*definit mon image de fond*/
+    height: 100%;/*permet de dire de remplir 100% de son conteneur*/
+    background-attachment: fixed;/*fixe l'image de fond au scroll*/
+    background-position: center;/*positionne l'image de fond au centre*/
+    background-repeat: no-repeat;/*empeche la répétition de l'image*/
+    background-size: cover;/*redimensionne l'image pour couvrir l'intégralité de l'element*/
+    overflow-x: hidden;
+}
+
+
+
+.container-first {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 80px;
+    color: #f1f1f1;
+    font-family: Abril fatface, sans-serif;
+}
+
+h1 span {
+    position: relative;
+}
+
+.container-btns {
+    width: 70%;
+    position: relative;
+    top: 50px;
+}
+
+.btn-first {
+    border: 2px solid #f1f1f1;
+    border-radius: 5px;
+    outline: none;
+    background-color: #f3f1f11c;
+    font-size: 25px;
+    padding: 10px;
+    width: 14rem;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: inset 1px 1px 5px 0 #ffffff;
+}
+
+.btn-first:nth-child(1){
+    margin-right: 30px;
+}
+.btn-first:hover {
+    transition: all 0.3s ease-in-out;
+    background: #ffffffcc;
+    color: #333;
+}
+.lignes {
+    position: absolute;
+    top: 6%;
+    left: 5%;
+}
+.l1 {
+    width: 250px;
+    height: 3px;
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+.l2 {
+    width: 140px;
+    height: 3px;
+    background: #f1f1f1;
+    border-radius: 5px;
+    position: relative;
+    top: 20px;
+}
+
+.logo {
+    position: absolute;
+    right: 2.9%;
+    top: 4%;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+.logo:hover {
+    opacity: 1;
+}
+
+.medias {
+    list-style-type: none;
+    position: absolute;
+    right: 3.3%;
+    top: 55%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.bulle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    position: relative;
+}
+
+.bulle:hover {
+    background-color: #f1f1f19c;
+}
+
+.logo-medias {
+    width: 40px;
+    height: 40px;
+}
+
+footer {
+    position: relative;
+    top: 100vh;
+    text-align: center;
+    color: #fff;
+}
+
+
+/********************************************** page projet *********************************************/
+.container-first.projets h1{
+    font-size: 60px;
+}
+
+.container-first.projets {
+    position: absolute;
+    top: 14%;
+    left: 5%;
+}
+.container-btns.projets {
+    position: relative;
+    top: 14rem;
+    left: 6rem;
+}
+
+#projetsContainer {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 30vh;
+}
+
+.divProjet {
+    width: 21%;
+    height: auto;
+    margin: 1rem auto;
+    padding-top: 15px;
+    border-radius: 20px;
+    background-color: #0b0f2263;
+}
+
+.projet {
+    width: 65%;
+    margin: auto;
+}
+
+span.titreProjet {
+    width: max-content;
+    color: #35c0f7;
+    margin: auto;
+    display: block;
+    font-size: 18px;
+}
+
+.projet a, 
+.techno a {
+    text-decoration: none;
+}
+
+.description, .techno {
+    width: 60%;
+    margin: 0 auto  1.5rem;
+    color: #fff;
+    font-size: 16px;
+}
+
+.techno a {
+    color: #fff;
+    font-size: 16px;
+    padding-bottom: 5px;
+    width: max-content;
+}
+
+.techno a:hover {
+    color: #000000;
+    background-color: #ffa600;
+    border-radius: 5px;
+    padding: 0.2rem 0.3rem;
+}
+
+.techno span {
+    color: #ffa600;
+    font-weight: bold;
+}
+
+.projet img {
+    width: 100%;
+    height: 150px;
+    display: block;
+    margin: 20px auto;    
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.footer-discover {
+    position: relative;
+    top: 37vh;
+    text-align: center;
+    color: #fff;
+}
+
+
+.scale-up-bl {
+    animation: scale-up-bl 1s cubic-bezier(.39,.575,.565,1.000) both;
+}
+@keyframes scale-up-bl {
+    0% { transform: scale(0.5) translate(-50px, 50px); opacity: 0; }
+    100% { transform: scale(1) translate(0,0); opacity: 1; }
+}
+.scale-up-tr {
+    animation: scale-up-tr 1s cubic-bezier(.39,.575,.565,1.000) both;
+}
+@keyframes scale-up-tr {
+    0% { transform: scale(0.5) translate(50px, -50px); opacity: 0; }
+    100% { transform: scale(1) translate(0,0); opacity: 1; }
+}
+
+
+
+/*******************************PAGE CONTACT *********************************************************************************************/
+
+.container-first.contact h1 {
+    font-size: 60px;
+}
+
+.container-first.contact{
+    top: 7rem;
+    left: 2rem;
+    font-size: 25px;
+}
+
+.container-btns.contact {
+    position: relative;
+    top: 15rem;
+    left: 2rem;
+    margin-bottom: 6rem;
+}
+
+.container-contact {
+    position: relative;
+    top: 15rem;
+    text-align: left;
+    color: #fff;
+    font-size: 23px;
+    line-height: 1.5;
+    margin: auto;
+    width: 50%;
+    
+}
+
+form {
+    position: relative;
+    top: 15rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4rem auto;
+    font-weight: bold;
+}
+
+label {
+    font-size: 1.2rem;
+    background-color: #cccccc50;
+    padding: 0 0.3rem;
+    border-radius: 3px ;
+}
+
+input[type="text"],
+input[type="email"], textarea {
+    width: 50%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    width: 30%;
+    padding: 10px;
+    background-color: #0B4D8C;
+    color: #fff;
+    border: 2px solid #dbd9d9;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+button[type="submit"]:hover {
+    background-color:#35c0f7;
+    color: #000;
+}
+
+.footer-contact {
+    position: relative;
+    top: 25vh;
+    text-align: center;
+}
+
+
+/***********************************************PAGE A PROPOS ***************************************************************/
+.container-first.a_propos {
+    position: absolute;
+    top: 17%;
+}
+
+.container-first.a_propos h1 {
+    font-size: 60px;
+}
+
+article {
+    margin-bottom: 3rem;
+}
+.text-info {
+    width: 100%;
+    margin: 3rem auto 0;
+    padding: 0.5rem;
+    color: #ffffff;    
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.footer_a_propos {
+    margin: 0rem auto;
+    width: max-content;
+    background-color: transparent;
+}
+
+
+
+/******************************************************** RESPONSIVE *********************************************************/
+@media (width <= 1200px) {
+    
+    .btn-first {
+        width: 12rem;
+        padding: 8px;
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    
+    h1 {
+        font-size: 80px;
+    }
+    
+    .medias {
+        top: 65%;
+    }
+    
+    .bulle {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .logo-medias {
+        width: 33px;
+        height: 33px;
+    }
+    
+    .divProjet {
+        width: 30%;
+    }
+    
+    span.titreProjet {
+        color: #0B4D8C;
+        font-size: 18px;
+        background-color: #ffffffd8;
+        padding: 0.4rem;
+        border-radius: 3px;
+    }
+    
+    .text-info {
+        margin: 2rem 0 0 ;
+    }
+    
+    footer, .footer-discover, .footer-contact, .footer_a_propos {
+        width: 100vw;
+        margin: 10rem auto;
+        padding: 1rem;
+        font-size: 1.1rem;
+        font-weight: bold;
+        background-color: #ffffff65;
+        color: #000;
+        border-radius: 3px;
+    }
+}
+
+/*   *******************************************  TABLETTE  *************************************************************/
+
+
+@media (width <= 768px) {
+    
+    .return-accueil a{
+        left: 10rem;
+        top: -5rem;
+    }
+    
+    h1 {
+        font-size: 50px;
+    }
+    
+    .container-first.projets h1, .container-first.a_propos h1, .container-first.contact h1 {
+        font-size: 40px;
+    }
+    
+    span.titreProjet  {
+        font-size: 14px;
+    }
+    
+    .divProjet {
+        width: 45%;
+    }
+    
+    .container-btns.projets {
+        left: 2rem;
+    }
+    
+    form {
+        width: 100%;
+    }
+    
+    
+    input[type="text"],
+    input[type="email"], textarea {
+        width: 80%;
+    }
+    
+    button[type="submit"] {
+        width: 60%;
+    }
+    
+}
+
+/*   *******************************************   MOBILE  *************************************************************/
+@media (width <= 480px) {
+    
+    h1 {
+        font-size: 40px;
+    }
+    
+    .container-first {
+        position: absolute;
+        top: 21%;
+        left: 5%;
+    }
+    
+    .container-contact{
+        text-align: left;
+        font-size: 18px;
+        line-height: 1.5;
+        width: 80%;
+        margin: auto;
+    }
+    
+    .divProjet {
+        width: 90%;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
