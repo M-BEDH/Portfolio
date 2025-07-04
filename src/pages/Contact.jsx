@@ -40,8 +40,8 @@ function Contact() {
       <main>
         <div className="container-first contact">
           <h1>
-            <span>Mon </span>
-            <span>Contact </span>
+            <span>Me </span>
+            <span>Contacter </span>
           </h1>
         </div>
 
