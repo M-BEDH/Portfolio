@@ -19,11 +19,11 @@ function Accueil() {
     const TL = gsap.timeline({ paused: true });
 
     TL
-      .staggerFrom(titreSpans, 1, { top: -50, opacity: 0, ease: "power2.out" }, 0.3)
-      .staggerFrom(btns, 1, { opacity: 0, ease: "power2.out" }, 0.3, "-=1")
-      .from(l1, 1, { width: 0, ease: "power2.out" }, "-=1.2")
+      .staggerFrom(titreSpans, 0.6, { top: -50, opacity: 0, ease: "power2.out" }, 0.3)
+      .staggerFrom(btns, 0.6, { opacity: 0, ease: "power2.out" }, 0.3, "-=1")
+      .from(l1, 1, { width: 0.6, ease: "power2.out" }, "-=1.2")
       .from(l2, 1, { width: 0, ease: "power2.out" }, "-=1.5")
-      .staggerFrom(medias, 1, {right: -200, ease: "power2.out"}, 0.3, '-=1');
+      .staggerFrom(medias, 0.6, {right: -200, ease: "power2.out"}, 0.3, '-=1');
 
     TL.play();
   }, []);

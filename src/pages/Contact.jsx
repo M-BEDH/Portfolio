@@ -20,9 +20,9 @@ function Contact() {
     const TL = gsap.timeline({ paused: true });
 
     TL
-      .staggerFrom(titre, 1, { top: -50, opacity: 0, ease: "power2.out" }, 0.3)
+      .staggerFrom(titre, 0.6, { top: -50, opacity: 0, ease: "power2.out" }, 0.3)
       .staggerFrom(lignes, 0.7, { opacity: 0, x: -30, ease: "power2.out" }, 0.15, "-=0.8")
-      .staggerFrom(btns, 1, { opacity: 0, ease: "power2.out" }, 0.3, "-=0.8")
+      .staggerFrom(btns, 0.6, { opacity: 0, ease: "power2.out" }, 0.3, "-=0.8")
       .staggerFrom(textes, 0.5, { opacity: 0, y: 30, ease: "power2.out" }, 0.1, "-=1");
 
     TL.play();

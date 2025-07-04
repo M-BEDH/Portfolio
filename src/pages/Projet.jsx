@@ -92,11 +92,11 @@ function Projet() {
     const TL = gsap.timeline({ paused: true });
 
     TL
-      .staggerFrom(titreSpans, 1, { top: -50, opacity: 0, ease: "power2.out" }, 0.3)
+      .staggerFrom(titreSpans, 0.6, { top: -50, opacity: 0, ease: "power2.out" }, 0.3)
       .staggerFrom(lignes, 0.7, { opacity: 0, x: -30, ease: "power2.out" }, 0.15, "-=0.8")
-      .staggerFrom(btns, 1, { opacity: 0, ease: "power2.out" }, 0.3, "-=0.8")
-      .from(l1, 1, { width: 0, ease: "power2.out" }, "-=1.2")
-      .from(l2, 1, { width: 0, ease: "power2.out" }, "-=1.5");
+      .staggerFrom(btns, 0.6, { opacity: 0, ease: "power2.out" }, 0.3, "-=0.8")
+      .from(l1, 0.6, { width: 0, ease: "power2.out" }, "-=1.2")
+      .from(l2, 0.6, { width: 0, ease: "power2.out" }, "-=1.5");
 
     TL.play();
   }, []);
