@@ -484,6 +484,23 @@ article {
         width: 90%;
     }
     
+ .container-first.projets h1, .container-first.a_propos h1, .container-first.contact h1 {
+        font-size: 30px;
+    }
+
+    .container-first.projets {
+        top: 15%;
+    }
+    
+    .container-btns.a_propos{
+        margin: auto;
+        top: 15px;
+    }
+
+.footer_a_propos {
+    top: 110vh;
+    font-size: 14px;
+}
 }
 
 

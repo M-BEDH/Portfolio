@@ -73,7 +73,7 @@ function Apropos() {
             </p>
           </article>
 
-          <div className="container-btns">
+          <div className="container-btns a_propos">
             <Link to="/">
               <button type="button" className="btn-first b2">Accueil</button>
             </Link>
