@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/portfolio_Bedhomme_Melissa/static/css/main.10527b60.css",
-    "main.js": "/portfolio_Bedhomme_Melissa/static/js/main.04f24c9a.js",
+    "main.css": "/portfolio_Bedhomme_Melissa/static/css/main.e7bb4caa.css",
+    "main.js": "/portfolio_Bedhomme_Melissa/static/js/main.f212eaa4.js",
     "static/media/sunset.jpg": "/portfolio_Bedhomme_Melissa/static/media/sunset.cb76fd7b2501668b3aa1.jpg",
     "index.html": "/portfolio_Bedhomme_Melissa/index.html",
-    "main.10527b60.css.map": "/portfolio_Bedhomme_Melissa/static/css/main.10527b60.css.map",
-    "main.04f24c9a.js.map": "/portfolio_Bedhomme_Melissa/static/js/main.04f24c9a.js.map"
+    "main.e7bb4caa.css.map": "/portfolio_Bedhomme_Melissa/static/css/main.e7bb4caa.css.map",
+    "main.f212eaa4.js.map": "/portfolio_Bedhomme_Melissa/static/js/main.f212eaa4.js.map"
   },
   "entrypoints": [
-    "static/css/main.10527b60.css",
-    "static/js/main.04f24c9a.js"
+    "static/css/main.e7bb4caa.css",
+    "static/js/main.f212eaa4.js"
   ]
 }
