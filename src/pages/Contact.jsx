@@ -31,24 +31,23 @@ function Contact() {
   }, []);
 
   const sendEmail = (e) => {
-    e.preventDefault();
-    const serviceName = "your_service_id";
-    const templateId = "your_template_id";
-    const publicKey = "your_public_key";
-
-    emailjs.sendForm(
-      serviceName,
-      templateId,
-      form.current,
-      publicKey
-    )
-      .then((result) => {
-        alert('Message sent successfully...');
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
-      });
-  };
+  e.preventDefault();
+  const publicKey = process.env.REACT_APP_PUBLIC_KEY;
+  const serviceId = process.env.REACT_APP_SERVICE_ID;
+  const templateId = process.env.REACT_APP_TEMPLATE_ID;
+  emailjs.sendForm(
+    serviceId,
+    templateId,
+    form.current,
+    publicKey
+  )
+    .then((result) => {
+      alert('Message sent successfully...');
+      console.log(result.text);
+    }, (error) => {
+      console.log(error.text);
+    });
+};
 
   return (
     <div ref={containerRef}>
