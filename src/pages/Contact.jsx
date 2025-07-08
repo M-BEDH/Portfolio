@@ -3,6 +3,8 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Link } from "react-router-dom";
 import emailjs from '@emailjs/browser';
+import { emailConfig, validateEmailConfig } from './emailConfig';
+
 import "../App.css";
 
 gsap.registerPlugin(useGSAP);
@@ -30,24 +32,28 @@ function Contact() {
     TL.play();
   }, []);
 
+  try {
+    validateEmailConfig();
+  } catch (e) {
+    console.error(e.message);
+    // Affichez un message d'erreur à l'utilisateur
+  }
+
   const sendEmail = (e) => {
-  e.preventDefault();
-  const publicKey = process.env.REACT_APP_PUBLIC_KEY;
-  const serviceId = process.env.REACT_APP_SERVICE_ID;
-  const templateId = process.env.REACT_APP_TEMPLATE_ID;
-  emailjs.sendForm(
-    serviceId,
-    templateId,
-    form.current,
-    publicKey
-  )
+    e.preventDefault();
+    emailjs.sendForm(
+      emailConfig.serviceId,
+      emailConfig.templateId,
+      form.current,
+      emailConfig.publicKey
+    )
     .then((result) => {
       alert('Message sent successfully...');
       console.log(result.text);
     }, (error) => {
       console.log(error.text);
     });
-};
+  };
 
   return (
     <div ref={containerRef}>
