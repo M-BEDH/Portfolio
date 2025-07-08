@@ -296,16 +296,23 @@ label {
 }
 
 input[type="text"],
-input[type="email"], textarea {
-    width: 50%;
+input[type="email"] {
+    width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-button[type="submit"] {
-    width: 30%;
+textarea {
+    width: 380px;
+    height: 76px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    width: 20%;
     padding: 10px;
     background-color: #0B4D8C;
     color: #fff;
@@ -315,14 +322,15 @@ button[type="submit"] {
     font-weight: bold;
     margin-top: 1rem;
 }
-button[type="submit"]:hover {
+
+input[type="submit"]:hover {
     background-color:#35c0f7;
     color: #000;
 }
 
 .footer-contact {
     position: relative;
-    top: 25vh;
+    top: 30vh;
     text-align: center;
 }
 
@@ -398,7 +406,7 @@ article {
     }
     
     .text-info {
-        margin: 2rem 0 0 ;
+        margin: 2rem 0 0;
     }
     
     footer, .footer-discover, .footer-contact, .footer_a_propos {
@@ -418,7 +426,7 @@ article {
 
 @media (width <= 768px) {
     
-    .return-accueil a{
+    .return-accueil a {
         left: 10rem;
         top: -5rem;
     }
@@ -440,6 +448,7 @@ article {
     }
     
     .container-btns.projets {
+        top: 11rem;
         left: 2rem;
     }
     
@@ -447,13 +456,12 @@ article {
         width: 100%;
     }
     
-    
     input[type="text"],
     input[type="email"], textarea {
         width: 80%;
     }
     
-    button[type="submit"] {
+    input[type="submit"] {
         width: 60%;
     }
     
@@ -466,6 +474,17 @@ article {
         font-size: 40px;
     }
     
+    .l1 {
+        width: 210px;
+    }
+    .logo {
+        right: 0;
+        top: 4%;
+        width: 45px;
+        height: 45px;
+        opacity: 0.7;
+    }
+    
     .container-first {
         position: absolute;
         top: 21%;
@@ -476,8 +495,19 @@ article {
         text-align: left;
         font-size: 18px;
         line-height: 1.5;
-        width: 80%;
+        width: 85%;
         margin: auto;
+    }
+    
+    .container-btns.contact {
+        position: relative;
+        top: 11rem;
+        left: 2rem;
+        margin-bottom: 0;
+    }
+    
+    .container-btns.projets {
+        top: 11rem;
     }
     
     .divProjet {
@@ -497,6 +527,22 @@ article {
         top: 15px;
     }
     
+    input[type="text"],
+    input[type="email"], textarea {
+        width: 90%;
+        margin: 1rem;
+    }
+    
+    input[type="submit"] {
+        width: 80%;
+    }
+    
+    textarea {
+        width: 280px;
+        height: 76px;
+        padding: 10px;
+    }
+    
     footer, .footer-discover, .footer-contact, .footer_a_propos {
         font-size: 14px;  
     }
@@ -505,12 +551,6 @@ article {
         top: 110vh;
     }
 }
-
-
-
-
-
-
 
 
 
