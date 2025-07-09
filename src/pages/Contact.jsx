@@ -99,11 +99,11 @@ function Contact() {
         <div>
           <form ref={form} onSubmit={sendEmail}>
             <div>
-              <input type='text' placeholder='Nom' name='user_name' />
-              <input type='email' placeholder='Email' name='user_email' />
+              <input type='text' placeholder='Nom' name='user_name' required='true' />
+              <input type='email' placeholder='Email' name='user_email' required='true' />
             </div>
             <div>
-              <textarea name='message' type='text' placeholder='Message'></textarea>
+              <textarea name='message' type='text' placeholder='Message' required='true'></textarea>
             </div>
             <input type='submit' value='Submit' id='input-submit' />
           </form>
