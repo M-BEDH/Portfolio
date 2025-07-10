@@ -82,7 +82,7 @@ h1 span {
 
 .cv {
     position: absolute;
-    right: 2.9%;
+    right: 5%;
     top: 4%;
     width: 80px;
     height: 100px;
@@ -489,10 +489,10 @@ article {
     }
     
     .l1 {
-        width: 210px;
+        width: 200px;
     }
     .cv {
-        right: 0;
+        right: 2%;
         top: 4%;
         width: 45px;
         height: 45px;
