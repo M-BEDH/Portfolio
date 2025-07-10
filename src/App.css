@@ -14,8 +14,6 @@
     overflow-x: hidden;
 }
 
-
-
 .container-first {
     position: absolute;
     top: 30%;
@@ -84,14 +82,18 @@ h1 span {
     position: absolute;
     right: 5%;
     top: 4%;
-    width: 80px;
-    height: 100px;
     cursor: pointer;
     opacity: 0.7;
+    width: 60px;
+    height: 60px;
 }
 
 .cv a {
     text-decoration: none;
+}
+
+.cv img {
+    width: 60px;
 }
 
 .cv .content {
@@ -147,6 +149,7 @@ h1 span {
 }
 
 footer {
+    width: 100vw;
     position: relative;
     top: 100vh;
     text-align: center;
@@ -241,6 +244,7 @@ span.titreProjet {
 }
 
 .footer-discover {
+    width: 100vw;
     position: relative;
     top: 37vh;
     text-align: center;
@@ -348,12 +352,13 @@ input[type="submit"]:hover {
 }
 
 .footer-contact {
+    width: 100vw;
     position: relative;
     top: 30vh;
     text-align: center;
 }
 
-
+ 
 /***********************************************PAGE A PROPOS ***************************************************************/
 .container-first.a_propos {
     position: absolute;
@@ -377,12 +382,20 @@ article {
 }
 
 .footer_a_propos {
+    width: 100vw;
     margin: 0rem auto;
-    width: max-content;
     background-color: transparent;
 }
 
 
+ footer, .footer-discover, .footer-contact, .footer_a_propos {
+        margin: 10rem auto;
+        padding: 1rem;
+        font-size: 1.1rem;
+        font-weight: bold;
+        background-color: #ffffff65;
+        color: #000;
+    }
 
 /******************************************************** RESPONSIVE *********************************************************/
 @media (width <= 1200px) {
@@ -428,16 +441,7 @@ article {
         margin: 2rem 0 0;
     }
     
-    footer, .footer-discover, .footer-contact, .footer_a_propos {
-        width: 100vw;
-        margin: 10rem auto;
-        padding: 1rem;
-        font-size: 1.1rem;
-        font-weight: bold;
-        background-color: #ffffff65;
-        color: #000;
-        border-radius: 3px;
-    }
+  
 }
 
 /*   *******************************************  TABLETTE  *************************************************************/
@@ -558,6 +562,7 @@ article {
     }
     
     footer, .footer-discover, .footer-contact, .footer_a_propos {
+        width: 116vw;
         font-size: 14px;  
     }
     
