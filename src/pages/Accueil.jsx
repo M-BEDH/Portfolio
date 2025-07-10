@@ -64,7 +64,7 @@ function Accueil() {
         <div className="cv">
           <a href={process.env.PUBLIC_URL + "/ressources/cv.pdf"}>
          <img src={process.env.PUBLIC_URL + "/ressources/cv.png"}  alt="lien pour accéder au curriculum vitae"/>
-         <div className="content">Télécharger le CV</div>
+         <div className="content">CV</div>
         </a> 
         </div>
 
