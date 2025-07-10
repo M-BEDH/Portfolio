@@ -23,8 +23,8 @@ function Apropos() {
       .staggerFrom(titreSpans, 0.6, { top: -50, opacity: 0, ease: "power2.out" }, 0.3)
       .staggerFrom(lignes, 0.7, { opacity: 0, x: -30, ease: "power2.out" }, 0.2, "-=0.8")
       .staggerFrom(btns, 0.6, { opacity: 0, ease: "power2.out" }, 0.3, "-=0.8")
-      .from(l1, 0.6, { width: 0, ease: "power2.out" }, "-=1.2")
-      .from(l2, 0.6, { width: 0, ease: "power2.out" }, "-=1.5");
+       .from(l1, 0.6, { scaleX: 0, transformOrigin: "left center", ease: "power2.out"}, "-=1.2")
+      .from(l2, 0.6, { scaleX: 0, transformOrigin: "left center", ease: "power2.out"}, "-=1.5")
 
     Anim.play();
   }, []);
@@ -36,13 +36,13 @@ function Apropos() {
           <div className="l1"></div>
           <div className="l2"></div>
         </div>
+
        <div className="cv">
           <a href={process.env.PUBLIC_URL + "/ressources/cv.pdf"}>
            <img src={process.env.PUBLIC_URL + "/ressources/cv.png"}  alt="lien pour accéder au curriculum vitae"/>
            <div className="content">Télécharger le CV</div>
           </a> 
         </div>
-
       </header>
 
       <main>

@@ -95,8 +95,8 @@ function Projet() {
       .staggerFrom(titreSpans, 0.6, { top: -50, opacity: 0, ease: "power2.out" }, 0.3)
       .staggerFrom(lignes, 0.7, { opacity: 0, x: -30, ease: "power2.out" }, 0.15, "-=0.8")
       .staggerFrom(btns, 0.6, { opacity: 0, ease: "power2.out" }, 0.3, "-=0.8")
-      .from(l1, 0.6, { width: 0, ease: "power2.out" }, "-=1.2")
-      .from(l2, 0.6, { width: 0, ease: "power2.out" }, "-=1.5");
+      .from(l1, 0.6, { scaleX: 0, transformOrigin: "left center", ease: "power2.out"}, "-=1.2")
+      .from(l2, 0.6, { scaleX: 0, transformOrigin: "left center", ease: "power2.out"}, "-=1.5")
 
     Anim.play();
   }, []);

@@ -4,7 +4,6 @@ import { useGSAP } from "@gsap/react";
 import { Link } from "react-router-dom";
 import emailjs from '@emailjs/browser';
 import { emailConfig, validateEmailConfig } from './emailConfig';
-
 import "../App.css";
 
 gsap.registerPlugin(useGSAP);
@@ -15,19 +14,23 @@ function Contact() {
 
   useGSAP(() => {
     if (!containerRef.current) return;
-
-    const titre = containerRef.current.querySelectorAll("h1 span");
+    const titreSpans = containerRef.current.querySelectorAll("h1 span");
     const btns = containerRef.current.querySelectorAll(".btn-first");
+     const l1 = containerRef.current.querySelector(".l1");
+    const l2 = containerRef.current.querySelector(".l2");
     const lignes = containerRef.current.querySelectorAll(".ligne");
     const textes = containerRef.current.querySelectorAll(".container-contact p, .form-contact label, .form-contact input, .form-contact textarea, .form-contact button");
 
-    const Anim = gsap.timeline();
+    const Anim = gsap.timeline({ paused: true });
 
     Anim
-      .staggerFrom(titre, 0.6, { top: -50, opacity: 0, ease: "power2.inOut" }, 0.3)
+      .staggerFrom(titreSpans, 0.6, { top: -50, opacity: 0, ease: "power2.inOut" }, 0.3)
       .staggerFrom(lignes, 0.7, { opacity: 0, x: -30, ease: "power2.inOut" }, 0.15, "-=0.8")
       .staggerFrom(btns, 0.6, { opacity: 0, ease: "power2.inOut" }, 0.3, "-=0.8")
-      .staggerFrom(textes, 0.5, { opacity: 0, y: 30, ease: "power2.inOut" }, 0.1, "-=1");
+      .staggerFrom(textes, 0.5, { opacity: 0, y: 30, ease: "power2.inOut" }, 0.4, "-=1")
+       .from(l1, 0.6, { scaleX: 0, transformOrigin: "left center", ease: "power2.out"}, "-=1.2")
+      .from(l2, 0.6, { scaleX: 0, transformOrigin: "left center", ease: "power2.out"}, "-=1.5")
+
 
     Anim.play();
   }, []);
@@ -59,8 +62,8 @@ function Contact() {
     <div ref={containerRef}>
       <header>
         <div className="lignes">
-          <div className="ligne l1"></div>
-          <div className="ligne l2"></div>
+          <div className="l1"></div>
+          <div className="l2"></div>
         </div>
       </header>
 

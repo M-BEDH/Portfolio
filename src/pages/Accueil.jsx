@@ -15,14 +15,17 @@ function Accueil() {
     const l1 = containerRef.current.querySelector(".l1");
     const l2 = containerRef.current.querySelector(".l2");
     const medias = containerRef.current.querySelectorAll(".medias .bulle"); 
+    const lignes = containerRef.current.querySelectorAll(".text-info .ligne");
+
 
     const Anim = gsap.timeline({ paused: true });
 
     Anim
       .staggerFrom(titreSpans, 0.6, { top: -50, opacity: 0, ease: "power2.out" }, 0.3)
+      .staggerFrom(lignes, 0.7, { opacity: 0, x: -30, ease: "power2.out" }, 0.2, "-=0.8")
       .staggerFrom(btns, 0.6, { opacity: 0, ease: "power2.out" }, 0.3, "-=1")
-      .from(l1, 1, { width: 0.6, ease: "power2.out" }, "-=1.2")
-      .from(l2, 1, { width: 0, ease: "power2.out" }, "-=1.5")
+      .from(l1, 0.6, { scaleX: 0, transformOrigin: "left center", ease: "power2.out"}, "-=1.2")
+      .from(l2, 0.6, { scaleX: 0, transformOrigin: "left center", ease: "power2.out"}, "-=1.5")
       .staggerFrom(medias, 0.6, {right: -200, ease: "power2.out"}, 0.3, '-=1');
 
     Anim.play();
