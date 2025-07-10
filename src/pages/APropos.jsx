@@ -36,9 +36,12 @@ function Apropos() {
           <div className="l1"></div>
           <div className="l2"></div>
         </div>
-        <a href={process.env.PUBLIC_URL + "/ressources/cv.pdf"}>
-          <img src={process.env.PUBLIC_URL + "/ressources/cv.png"} className="logo" alt="lien pour accéder au curriculum vitae" />
-        </a>
+       <div className="cv">
+          <a href={process.env.PUBLIC_URL + "/ressources/cv.pdf"}>
+           <img src={process.env.PUBLIC_URL + "/ressources/cv.png"}  alt="lien pour accéder au curriculum vitae"/>
+           <div className="content">Télécharger le CV</div>
+          </a> 
+        </div>
 
       </header>
 
