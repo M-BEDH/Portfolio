@@ -16,16 +16,16 @@ function Accueil() {
     const l2 = containerRef.current.querySelector(".l2");
     const medias = containerRef.current.querySelectorAll(".medias .bulle"); 
 
-    const TL = gsap.timeline({ paused: true });
+    const Anim = gsap.timeline({ paused: true });
 
-    TL
+    Anim
       .staggerFrom(titreSpans, 0.6, { top: -50, opacity: 0, ease: "power2.out" }, 0.3)
       .staggerFrom(btns, 0.6, { opacity: 0, ease: "power2.out" }, 0.3, "-=1")
       .from(l1, 1, { width: 0.6, ease: "power2.out" }, "-=1.2")
       .from(l2, 1, { width: 0, ease: "power2.out" }, "-=1.5")
       .staggerFrom(medias, 0.6, {right: -200, ease: "power2.out"}, 0.3, '-=1');
 
-    TL.play();
+    Anim.play();
   }, []);
 
   return (
@@ -57,6 +57,11 @@ function Accueil() {
             </Link>
           </div>
         </div>
+
+       <a href={process.env.PUBLIC_URL + "/ressources/cv.pdf"}>
+          <img src={process.env.PUBLIC_URL + "/ressources/cv.png"} className="logo" alt="lien pour accéder au curriculum vitae" />
+        </a>
+
 
         <ul className="medias">
           <li className="bulle">

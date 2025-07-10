@@ -21,15 +21,15 @@ function Contact() {
     const lignes = containerRef.current.querySelectorAll(".ligne");
     const textes = containerRef.current.querySelectorAll(".container-contact p, .form-contact label, .form-contact input, .form-contact textarea, .form-contact button");
 
-    const TL = gsap.timeline();
+    const Anim = gsap.timeline();
 
-    TL
+    Anim
       .staggerFrom(titre, 0.6, { top: -50, opacity: 0, ease: "power2.inOut" }, 0.3)
       .staggerFrom(lignes, 0.7, { opacity: 0, x: -30, ease: "power2.inOut" }, 0.15, "-=0.8")
       .staggerFrom(btns, 0.6, { opacity: 0, ease: "power2.inOut" }, 0.3, "-=0.8")
       .staggerFrom(textes, 0.5, { opacity: 0, y: 30, ease: "power2.inOut" }, 0.1, "-=1");
 
-    TL.play();
+    Anim.play();
   }, []);
 
   try {
@@ -83,6 +83,10 @@ function Contact() {
             <button type="button" className="btn-first b2">À propos</button>
           </Link>
         </div>
+
+         <a href={process.env.PUBLIC_URL + "/ressources/cv.pdf"}>
+          <img src={process.env.PUBLIC_URL + "/ressources/cv.png"} className="logo" alt="lien pour accéder au curriculum vitae" />
+        </a>
 
         <div className="container-contact">
           <p>

@@ -89,16 +89,16 @@ function Projet() {
     const l2 = containerRef.current.querySelector(".l2");
     const lignes = containerRef.current.querySelectorAll(".text-info .ligne");
 
-    const TL = gsap.timeline({ paused: true });
+    const Anim = gsap.timeline({ paused: true });
 
-    TL
+    Anim
       .staggerFrom(titreSpans, 0.6, { top: -50, opacity: 0, ease: "power2.out" }, 0.3)
       .staggerFrom(lignes, 0.7, { opacity: 0, x: -30, ease: "power2.out" }, 0.15, "-=0.8")
       .staggerFrom(btns, 0.6, { opacity: 0, ease: "power2.out" }, 0.3, "-=0.8")
       .from(l1, 0.6, { width: 0, ease: "power2.out" }, "-=1.2")
       .from(l2, 0.6, { width: 0, ease: "power2.out" }, "-=1.5");
 
-    TL.play();
+    Anim.play();
   }, []);
 
   return (
@@ -130,6 +130,10 @@ function Projet() {
             <button className="btn-first b2">Contact</button>
           </Link>
         </div>
+
+         <a href={process.env.PUBLIC_URL + "/ressources/cv.pdf"}>
+          <img src={process.env.PUBLIC_URL + "/ressources/cv.png"} className="logo" alt="lien pour accéder au curriculum vitae" />
+        </a>
 
         <div id="projetsContainer">
           {projets.map((projet, index) => (
