@@ -51,7 +51,7 @@ function Contact() {
       emailConfig.publicKey
     )
     .then((result) => {
-      alert('Message sent successfully...');
+      alert('Message envoyé...');
       console.log(result.text);
     }, (error) => {
       console.log(error.text);
