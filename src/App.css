@@ -149,10 +149,8 @@ h1 span {
 }
 
 footer {
-    width: 100vw;
     position: relative;
     top: 100vh;
-    text-align: center;
     color: #fff;
 }
 
@@ -244,10 +242,8 @@ span.titreProjet {
 }
 
 .footer-discover {
-    width: 100vw;
     position: relative;
     top: 37vh;
-    text-align: center;
     color: #fff;
 }
 
@@ -352,10 +348,8 @@ input[type="submit"]:hover {
 }
 
 .footer-contact {
-    width: 100vw;
     position: relative;
     top: 30vh;
-    text-align: center;
 }
 
  
@@ -383,7 +377,6 @@ article {
 
 .footer_a_propos {
     width: 100vw;
-    margin: 0rem auto;
     background-color: transparent;
 }
 
@@ -394,7 +387,7 @@ article {
         font-size: 1.1rem;
         font-weight: bold;
         background-color: #ffffff65;
-        color: #000;
+        text-align: center;
     }
 
 /******************************************************** RESPONSIVE *********************************************************/
@@ -562,7 +555,7 @@ article {
     }
     
     footer, .footer-discover, .footer-contact, .footer_a_propos {
-        width: 116vw;
+        width: 105vw;
         font-size: 14px;  
     }
     
