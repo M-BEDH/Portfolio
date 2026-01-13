@@ -44,7 +44,6 @@ function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log(process.env.REACT_APP_SERVICE_ID);
     emailjs.sendForm(
       emailConfig.serviceId,
       emailConfig.templateId,
