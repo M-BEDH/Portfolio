@@ -8,3 +8,5 @@ export function validateEmailConfig() {
     throw new Error("Configuration EmailJS manquante");
   }
 }
+
+console.log(emailConfig);

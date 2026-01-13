@@ -1,16 +1,27 @@
-*, ::before, ::after {
+/* =======================
+   Section : global styles
+   ======================= */
+*,
+::before,
+::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-.parallax{
-    background-image:url('../public/ressources/sunset.jpg');/*definit mon image de fond*/
-    height: 100%;/*permet de dire de remplir 100% de son conteneur*/
-    background-attachment: fixed;/*fixe l'image de fond au scroll*/
-    background-position: center;/*positionne l'image de fond au centre*/
-    background-repeat: no-repeat;/*empeche la répétition de l'image*/
-    background-size: cover;/*redimensionne l'image pour couvrir l'intégralité de l'element*/
+.parallax {
+    background-image: url('../public/ressources/sunset.jpg');
+    /*definit mon image de fond*/
+    height: 100%;
+    /*permet de dire de remplir 100% de son conteneur*/
+    background-attachment: fixed;
+    /*fixe l'image de fond au scroll*/
+    background-position: center;
+    /*positionne l'image de fond au centre*/
+    background-repeat: no-repeat;
+    /*empeche la répétition de l'image*/
+    background-size: cover;
+    /*redimensionne l'image pour couvrir l'intégralité de l'element*/
     overflow-x: hidden;
 }
 
@@ -50,25 +61,29 @@ h1 span {
     box-shadow: inset 1px 1px 5px 0 #ffffff;
 }
 
-.btn-first:nth-child(1){
+.btn-first:nth-child(1) {
     margin-right: 30px;
 }
+
 .btn-first:hover {
     transition: all 0.3s ease-in-out;
     background: #ffffffcc;
     color: #333;
 }
+
 .lignes {
     position: absolute;
     top: 6%;
     left: 5%;
 }
+
 .l1 {
     width: 250px;
     height: 3px;
     background: #f1f1f1;
     border-radius: 5px;
 }
+
 .l2 {
     width: 140px;
     height: 3px;
@@ -101,10 +116,10 @@ h1 span {
     width: 50px;
     position: relative;
     top: -0.3rem;
-    left:1.2rem;
+    left: 1.2rem;
 }
 
-.cv:hover .content{
+.cv:hover .content {
     opacity: 1;
     cursor: pointer;
     color: white;
@@ -125,6 +140,7 @@ h1 span {
     align-items: center;
     flex-direction: column;
 }
+
 .bulle {
     width: 60px;
     height: 60px;
@@ -154,9 +170,11 @@ footer {
     color: #fff;
 }
 
-
+/* =======================
+   Section : page projet
+   ======================= */
 /********************************************** page projet *********************************************/
-.container-first.projets h1{
+.container-first.projets h1 {
     font-size: 60px;
 }
 
@@ -165,6 +183,7 @@ footer {
     top: 14%;
     left: 5%;
 }
+
 .container-btns.projets {
     position: relative;
     top: 14rem;
@@ -201,14 +220,15 @@ span.titreProjet {
     font-size: 18px;
 }
 
-.projet a, 
+.projet a,
 .techno a {
     text-decoration: none;
 }
 
-.description, .techno {
+.description,
+.techno {
     width: 60%;
-    margin: 0 auto  1.5rem;
+    margin: 0 auto 1.5rem;
     color: #fff;
     font-size: 16px;
 }
@@ -236,7 +256,7 @@ span.titreProjet {
     width: 100%;
     height: 150px;
     display: block;
-    margin: 20px auto;    
+    margin: 20px auto;
     border-radius: 30px;
     object-fit: cover;
 }
@@ -249,29 +269,48 @@ span.titreProjet {
 
 
 .scale-up-bl {
-    animation: scale-up-bl 1s cubic-bezier(.39,.575,.565,1.000) both;
+    animation: scale-up-bl 1s cubic-bezier(.39, .575, .565, 1.000) both;
 }
+
 @keyframes scale-up-bl {
-    0% { transform: scale(0.5) translate(-50px, 50px); opacity: 0; }
-    100% { transform: scale(1) translate(0,0); opacity: 1; }
+    0% {
+        transform: scale(0.5) translate(-50px, 50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1) translate(0, 0);
+        opacity: 1;
+    }
 }
+
 .scale-up-tr {
-    animation: scale-up-tr 1s cubic-bezier(.39,.575,.565,1.000) both;
+    animation: scale-up-tr 1s cubic-bezier(.39, .575, .565, 1.000) both;
 }
+
 @keyframes scale-up-tr {
-    0% { transform: scale(0.5) translate(50px, -50px); opacity: 0; }
-    100% { transform: scale(1) translate(0,0); opacity: 1; }
+    0% {
+        transform: scale(0.5) translate(50px, -50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1) translate(0, 0);
+        opacity: 1;
+    }
 }
 
 
-
+/* =======================
+   Section : contact
+   ======================= */
 /*******************************PAGE CONTACT *********************************************************************************************/
 
 .container-first.contact h1 {
     font-size: 60px;
 }
 
-.container-first.contact{
+.container-first.contact {
     top: 7rem;
     left: 2rem;
     font-size: 25px;
@@ -293,7 +332,7 @@ span.titreProjet {
     line-height: 1.5;
     margin: auto;
     width: 50%;
-    
+
 }
 
 form {
@@ -311,7 +350,7 @@ label {
     font-size: 1.2rem;
     background-color: #cccccc50;
     padding: 0 0.3rem;
-    border-radius: 3px ;
+    border-radius: 3px;
 }
 
 input[type="text"],
@@ -343,7 +382,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color:#35c0f7;
+    background-color: #35c0f7;
     color: #000;
 }
 
@@ -352,7 +391,10 @@ input[type="submit"]:hover {
     top: 30vh;
 }
 
- 
+
+/* =======================
+   Section : à propos
+   ======================= */
 /***********************************************PAGE A PROPOS ***************************************************************/
 .container-first.a_propos {
     position: absolute;
@@ -366,11 +408,12 @@ input[type="submit"]:hover {
 article {
     margin-bottom: 3rem;
 }
+
 .text-info {
     width: 100%;
     margin: 3rem auto 0;
     padding: 0.5rem;
-    color: #ffffff;    
+    color: #ffffff;
     font-size: 20px;
     line-height: 1.5;
 }
@@ -381,47 +424,54 @@ article {
 }
 
 
- footer, .footer-discover, .footer-contact, .footer_a_propos {
-        margin: 10rem auto;
-        padding: 1rem;
-        font-size: 1.1rem;
-        font-weight: bold;
-        background-color: #ffffff65;
-        text-align: center;
-    }
+footer,
+.footer-discover,
+.footer-contact,
+.footer_a_propos {
+    margin: 10rem auto;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #ffffff65;
+    text-align: center;
+}
 
+
+/* =======================
+   Section : responsive
+   ======================= */
 /******************************************************** RESPONSIVE *********************************************************/
-@media (width <= 1200px) {
-    
+@media (width <=1200px) {
+
     .btn-first {
         width: 12rem;
         padding: 8px;
         font-size: 15px;
         margin-bottom: 5px;
     }
-    
+
     h1 {
         font-size: 80px;
     }
-    
+
     .medias {
         top: 65%;
     }
-    
+
     .bulle {
         width: 50px;
         height: 50px;
     }
-    
+
     .logo-medias {
         width: 33px;
         height: 33px;
     }
-    
+
     .divProjet {
         width: 30%;
     }
-    
+
     span.titreProjet {
         color: #0B4D8C;
         font-size: 18px;
@@ -429,65 +479,75 @@ article {
         padding: 0.4rem;
         border-radius: 3px;
     }
-    
+
     .text-info {
         margin: 2rem 0 0;
     }
-    
-  
+
+
 }
 
+/* =======================
+   Section : tablette
+   ======================= */
 /*   *******************************************  TABLETTE  *************************************************************/
 
 
-@media (width <= 768px) {
-    
+@media (width <=768px) {
+
     h1 {
         font-size: 50px;
     }
-    
-    .container-first.projets h1, .container-first.a_propos h1, .container-first.contact h1 {
+
+    .container-first.projets h1,
+    .container-first.a_propos h1,
+    .container-first.contact h1 {
         font-size: 40px;
     }
 
-    span.titreProjet  {
+    span.titreProjet {
         font-size: 14px;
     }
-    
+
     .divProjet {
         width: 45%;
     }
-    
+
     .container-btns.projets {
         top: 11rem;
         left: 2rem;
     }
-    
+
     form {
         width: 100%;
     }
-    
+
     input[type="text"],
-    input[type="email"], textarea {
+    input[type="email"],
+    textarea {
         width: 80%;
     }
-    
+
     input[type="submit"] {
         width: 60%;
     }
-    
+
 }
 
+/* =======================
+   Section : mobile
+   ======================= */
 /*   *******************************************   MOBILE  *************************************************************/
-@media (width <= 480px) {
-    
+@media (width <=480px) {
+
     h1 {
         font-size: 40px;
     }
-    
+
     .l1 {
         width: 200px;
     }
+
     .cv {
         right: 2%;
         top: 4%;
@@ -495,79 +555,77 @@ article {
         height: 45px;
         opacity: 0.7;
     }
-    
+
     .container-first {
         position: absolute;
         top: 21%;
         left: 5%;
     }
-    
-    .container-contact{
+
+    .container-contact {
         text-align: left;
         font-size: 18px;
         line-height: 1.5;
         width: 85%;
         margin: auto;
     }
-    
+
     .container-btns.contact {
         position: relative;
         top: 11rem;
         left: 2rem;
         margin-bottom: 0;
     }
-    
+
     .container-btns.projets {
         top: 11rem;
     }
-    
+
     .divProjet {
         width: 100%;
     }
-    
-    .container-first.projets h1, .container-first.a_propos h1, .container-first.contact h1 {
+
+    .container-first.projets h1,
+    .container-first.a_propos h1,
+    .container-first.contact h1 {
         font-size: 30px;
     }
-    
+
     .container-first.projets {
         top: 15%;
     }
-    
-    .container-btns.a_propos{
+
+    .container-btns.a_propos {
         margin: auto;
         top: 15px;
     }
-    
+
     input[type="text"],
-    input[type="email"], textarea {
+    input[type="email"],
+    textarea {
         width: 90%;
         margin: 1rem;
     }
-    
+
     input[type="submit"] {
         width: 80%;
     }
-    
+
     textarea {
         width: 280px;
         height: 76px;
         padding: 10px;
     }
-    
-    footer, .footer-discover, .footer-contact, .footer_a_propos {
+
+    footer,
+    .footer-discover,
+    .footer-contact,
+    .footer_a_propos {
         width: 105vw;
-        font-size: 14px;  
+        font-size: 14px;
     }
-    
+
     .footer_a_propos {
         top: 110vh;
     }
 }
-
-
-
-
-
-
-
-

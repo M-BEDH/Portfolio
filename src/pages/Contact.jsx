@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import emailjs from '@emailjs/browser';
 import { emailConfig, validateEmailConfig } from './emailConfig';
 import "../App.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 gsap.registerPlugin(useGSAP);
 
@@ -16,7 +18,7 @@ function Contact() {
     if (!containerRef.current) return;
     const titreSpans = containerRef.current.querySelectorAll("h1 span");
     const btns = containerRef.current.querySelectorAll(".btn-first");
-     const l1 = containerRef.current.querySelector(".l1");
+    const l1 = containerRef.current.querySelector(".l1");
     const l2 = containerRef.current.querySelector(".l2");
     const lignes = containerRef.current.querySelectorAll(".ligne");
     const textes = containerRef.current.querySelectorAll(".container-contact p, .form-contact label, .form-contact input, .form-contact textarea, .form-contact button");
@@ -28,9 +30,8 @@ function Contact() {
       .staggerFrom(lignes, 0.7, { opacity: 0, x: -30, ease: "power2.inOut" }, 0.15, "-=0.8")
       .staggerFrom(btns, 0.6, { opacity: 0, ease: "power2.inOut" }, 0.3, "-=0.8")
       .staggerFrom(textes, 0.5, { opacity: 0, y: 30, ease: "power2.inOut" }, 0.4, "-=1")
-       .from(l1, 0.6, { scaleX: 0, transformOrigin: "left center", ease: "power2.out"}, "-=1.2")
-      .from(l2, 0.6, { scaleX: 0, transformOrigin: "left center", ease: "power2.out"}, "-=1.5")
-
+      .from(l1, 0.6, { scaleX: 0, transformOrigin: "left center", ease: "power2.out"}, "-=1.2")
+      .from(l2, 0.6, { scaleX: 0, transformOrigin: "left center", ease: "power2.out"}, "-=1.5");
 
     Anim.play();
   }, []);
@@ -39,11 +40,11 @@ function Contact() {
     validateEmailConfig();
   } catch (e) {
     console.error(e.message);
-    // Affichez un message d'erreur à l'utilisateur
   }
 
   const sendEmail = (e) => {
     e.preventDefault();
+    console.log(process.env.REACT_APP_SERVICE_ID);
     emailjs.sendForm(
       emailConfig.serviceId,
       emailConfig.templateId,
@@ -51,10 +52,10 @@ function Contact() {
       emailConfig.publicKey
     )
     .then((result) => {
-      alert('Message envoyé...');
-      console.log(result.text);
+      toast.success("Message envoyé avec succès !");
+      form.current.reset();
     }, (error) => {
-      console.log(error.text);
+      toast.error("Erreur lors de l'envoi du message. Veuillez réessayer.");
     });
   };
 
@@ -86,11 +87,11 @@ function Contact() {
             <button type="button" className="btn-first b2">À propos</button>
           </Link>
         </div>
-       <div className="cv">
+        <div className="cv">
           <a href={process.env.PUBLIC_URL + "/ressources/cv.pdf"}>
-           <img src={process.env.PUBLIC_URL + "/ressources/cv.png"}  alt="lien pour accéder au curriculum vitae"/>
-           <div className="content">Télécharger le CV</div>
-        </a> 
+            <img src={process.env.PUBLIC_URL + "/ressources/cv.png"}  alt="lien pour accéder au curriculum vitae"/>
+            <div className="content">Télécharger le CV</div>
+          </a> 
         </div>
 
         <div className="container-contact">
@@ -108,14 +109,15 @@ function Contact() {
         <div>
           <form ref={form} onSubmit={sendEmail}>
             <div>
-              <input type='text' placeholder='Nom' name='user_name' required='true' />
-              <input type='email' placeholder='Email' name='user_email' required='true' />
+              <input type='text' placeholder='Nom' name='user_name' required />
+              <input type='email' placeholder='Email' name='user_email' required />
             </div>
             <div>
-              <textarea name='message' type='text' placeholder='Message' required='true'></textarea>
+              <textarea name='message' type='text' placeholder='Message' required></textarea>
             </div>
             <input type='submit' value='Submit' id='input-submit' />
           </form>
+          <ToastContainer />
         </div>
 
         <footer className="footer-contact">
