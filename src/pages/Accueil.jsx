@@ -83,7 +83,7 @@ function Accueil() {
       </main>
 
       <footer>
-        <p>&copy; 2025 Mélissa Bedhomme. Tous droits réservés.</p>
+        <p>&copy; Mélissa Bedhomme. Tous droits réservés.</p>
       </footer>
     </div>
   );

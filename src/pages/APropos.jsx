@@ -95,7 +95,7 @@ function Apropos() {
       </main>
 
       <footer className="footer_a_propos">
-        <p>&copy; 2025 Mélissa Bedhomme. Tous droits réservés.</p>
+        <p>&copy; Mélissa Bedhomme. Tous droits réservés.</p>
       </footer>
     </div>
   );

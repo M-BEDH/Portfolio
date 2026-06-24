@@ -168,7 +168,7 @@ function Projet() {
       </main>
 
       <footer className="footer-discover">
-        <p>&copy; 2025 Mélissa Bedhomme. Tous droits réservés.</p>
+        <p>&copy; Mélissa Bedhomme. Tous droits réservés.</p>
       </footer>
 
     </div>

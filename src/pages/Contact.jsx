@@ -120,7 +120,7 @@ function Contact() {
         </div>
 
         <footer className="footer-contact">
-          <p>&copy; 2025 Mélissa Bedhomme. Tous droits réservés.</p>
+          <p>&copy; Mélissa Bedhomme. Tous droits réservés.</p>
         </footer>
       </main>
     </div>
